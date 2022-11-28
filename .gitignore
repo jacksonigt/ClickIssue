@@ -1,0 +1,52 @@
+syntax: glob
+
+# Temp files
+*/Library/
+*/Temp/
+bin
+obj
+Logs
+*.binlog
+.sonarqube/
+*/FuelTranslations
+*.fuelpackage
+packages-lock.json
+*.bak
+
+# Unity User settings
+**/UserSettings
+
+# Generated
+# *.xbinreg
+# *.xthemereg
+# *.xlocalization
+# *.xsifinformation
+build.cfg
+IGT.LicenseInfo.rtf
+GI*.json
+
+# Edidor Save Storage
+*.safestorage
+
+# Visual Studio
+.vs
+.vsconfig
+_ReSharper.Caches
+*.csproj
+*.sln
+*.sln.metaproj*
+
+# GGA
+.gamedev/
+.nuget/
+AssemblyProjects
+*/Assets/Assemblies
+*/Packages/com.igt.gga*/
+*/Paytables/stdgb01-as-ia-mpt_-001-0001-0001-ab00.ia32
+
+# Local Builds
+*/Builds/
+
+# Internal Folders
+Internal/Art
+Internal/Sound
