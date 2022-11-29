@@ -20,7 +20,10 @@ public class MyDisplay : MonoBehaviour
             {
                 display.Activate();
             }
-            display.SetParams(width: 1600, height: 900, x: 300, y: 0);
+
+            var width = 800;
+            int height = 450;
+            display.SetParams(width, height, x: 50, y: i * height + i * 24);
         }
     }
 }
