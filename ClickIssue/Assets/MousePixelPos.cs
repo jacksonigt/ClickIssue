@@ -10,6 +10,6 @@ public class MousePixelPos : MonoBehaviour
     {
         var pos = Input.mousePosition;
 
-        GetComponent<TextMeshProUGUI>().text = $"Mouse Pos: x{pos.x}, y{pos.y}";
+        GetComponent<TextMeshProUGUI>().text = $"Mouse Pos from the bottom left corner of Screen 1: x{pos.x}, y{pos.y}";
     }
 }
