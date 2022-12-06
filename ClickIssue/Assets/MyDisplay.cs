@@ -5,7 +5,14 @@ public class MyDisplay : MonoBehaviour
     void Start()
     {
 
+        if(!Application.isEditor)
+        {
+            InitDisplays();
+        }
+    }
 
+    void InitDisplays()
+    {
         for(var i = 0; i < 2; i++)
         {
             var display = Display.displays[i];
@@ -14,7 +21,7 @@ public class MyDisplay : MonoBehaviour
             {
                 // To change the size and position of primary display you must also activate it by calling Display.displays[0].Activate(0, 0, 0);
                 // https://docs.unity3d.com/2020.3/Documentation/ScriptReference/Display.SetParams.html
-                display.Activate(0,0,0);
+                display.Activate(0, 0, 0);
             }
             else
             {
