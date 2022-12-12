@@ -1,14 +1,33 @@
+using System.Collections;
+using System.Reflection;
+using TMPro;
 using UnityEngine;
 
 public class MyDisplay : MonoBehaviour
 {
+    [SerializeField]
+    private TextMeshProUGUI countDownText;
+
     void Start()
     {
 
         if(!Application.isEditor)
         {
-            InitDisplays();
+            StartCoroutine(DelayThenInit(10f));
         }
+    }
+
+    private IEnumerator DelayThenInit(float delaySec)
+    {
+        var totalDelay = (int)delaySec;
+
+        for(var i = totalDelay; i >=0; i--)
+        {
+            countDownText.text = $"Time remaining to attach a debugger: {i}";
+            yield return new WaitForSeconds((1));
+        }
+        countDownText.gameObject.SetActive((false));
+        InitDisplays();
     }
 
     void InitDisplays()
